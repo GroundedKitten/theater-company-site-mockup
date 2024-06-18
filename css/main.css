@@ -1,0 +1,744 @@
+/* css reset */
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+p,
+img,
+ul,
+li,
+footer,
+header,
+nav {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+:root {
+  font-size: 16px; /* Establishing font size for calculations */
+
+  /* Custom vars to facilitate calculations for mobile responsive layouts */
+  --hero-width: 100vw; /* Full width by default */
+  --hero-height: 14.0625rem; /* Default height to prioritize mobile experience */
+  --hero-img: url("../img/hero/hero-bg-400x225.png"); /* Default hero img */
+
+  /* Custom vars for icon colors for easier modification */
+  --caret-down-color: #000;
+
+  --phone-color: #33ff3a;
+  --phone-hover-color: #96d891;
+
+  --envelope-color: #82caff;
+  --envelope-hover-color: #d3f3fe;
+
+  --map-pin-color: #ff0000;
+  --map-pin-hover-color: #fcd308;
+
+  --ticket-color: #c04c43;
+  --ticket-hover-color: #d89e0a;
+
+  --bell-color: #d89e0a;
+  --bell-hover-color: #c04c43;
+
+  --facebook-color: #0866ff;
+  --facebook-hover-color: #45c8f7;
+
+  --instagram-color: #fe207d;
+  --instagram-hover-color: #ff45f6;
+
+  --x-twitter-color: #c0c0c0;
+  --x-twitter-hover-color: #43e9ff;
+
+  --youtube-color: #ff0000;
+  --youtube-hover-color: #ffffff;
+
+  --linkedin-color: #317daf;
+  --linkedin-hover-color: hsl(194, 100%, 72%);
+
+  --pinterest-color: #999;
+  --pinterest-hover-color: #e81d37;
+}
+
+body {
+  margin: 0 auto;
+}
+
+/* Main grid layout */
+.layout {
+  width: 100vw;
+  height: auto;
+
+  display: grid;
+  grid:
+    "header" auto
+    "hero" auto
+    "main" auto
+    "footer" auto
+    / 100%;
+
+  justify-content: center;
+  align-content: start;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Site Header */
+.header {
+  grid-area: header;
+
+  width: 100%;
+  height: auto;
+  background-color: #000;
+
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+
+/* Marquee Sign styles for the logo */
+/* Outer container for the marquee sign and show titles */
+
+.logo-container {
+  margin: 1.5rem 1rem 0 1rem;
+
+  /* Styles in role as flex child to site header */
+  flex: 0 0 100%;
+
+  /* Styles in role as flex parent to marquee elements */
+  display: flex; /* Ensure display flex */
+  flex-direction: column; /* Ensure column direction for stacking */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* Marquee Sign Styles */
+.marquee-sign-container {
+  width: 16rem;
+  height: auto;
+  position: relative;
+  z-index: 98;
+
+  display: block;
+  flex: 0 0 auto;
+
+  background-color: rgba(31, 29, 27, 0.8); /* black bronze for sign's bg */
+  border: outset 0.05rem #faebd7; /* antique white for outer marquee border */
+  border-top-left-radius: 5.2rem 2.1rem; /* top curvature */
+  border-top-right-radius: 5.2rem 2.1rem;
+  border-bottom-left-radius: 0.25rem 0.125rem; /* bottom corners slightly rounded, worn effect */
+  border-bottom-right-radius: 0.25rem 0.125rem;
+  filter: brightness(150%); /* backlighting for sign */
+  box-shadow: 0 0 0.35rem rgba(255, 200, 25, 1); /* emitting slight glow around the marquee sign */
+}
+
+.marquee-lights-backing {
+  background: linear-gradient(
+    345deg,
+    #272323 0%,
+    #431b0d 2%,
+    #221e1e 4%,
+    #2e2727 19%,
+    #262222 30%,
+    #232121 40%,
+    #1f1b1b 45%,
+    #262222 75%,
+    #351808 98%,
+    #2c2828 100%
+  ); /* Uneven background to simulate aged look to evoke historical town theater */
+  border: solid 0.175rem #49371b; /* antique bronze for the inner marquee border */
+  border-top-left-radius: 5rem 2rem;
+  border-top-right-radius: 5rem 2rem;
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.marquee-lights {
+  width: 100%;
+  height: auto;
+  outline-width: 0.3rem;
+  outline-style: dotted;
+  outline-color: rgba(250, 253, 239, 1); /* Hint of Yellow */
+  outline-offset: -0.8rem;
+}
+
+.marquee-text-backing {
+  width: 100%;
+  height: 3.5rem;
+  margin: 0.5rem 0 0.125rem 0;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.marquee-text {
+  font-family: "Neon Triper", monospace;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: #ffffcc;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.05rem 0.05rem rgba(30, 10, 10, 0.9);
+}
+
+/* Container for the bottom sign, with the now-showing titles */
+.now-showing-container {
+  width: 19rem;
+  height: 3.5rem;
+  margin: -0.1rem 0 0 0;
+  position: relative;
+  z-index: 99;
+  background-color: rgba(255, 241, 238, 0.9); /* forget me not */
+  border: 0.15rem solid #e55b3c; /* shocking orange for outer border */
+  border-radius: 0.125rem; /* slightly worn corners */
+  box-shadow: 0.01rem 0.075rem 0.025rem rgba(30, 30, 30, 0.9);
+  filter: brightness(150%); /* backlighting for sign */
+
+  display: block;
+  flex: 0 0 auto;
+
+  outline: 0.15rem dotted rgba(255, 0, 13, 0.6); /* bright red dotted interior lights */
+  outline-offset: -0.4rem;
+  overflow: hidden;
+}
+
+.now-showing-text {
+  width: 6rem;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  overflow: hidden;
+  transform: rotate(-20deg); /* Rotating the 'Now Showing' text */
+  transform-origin: left bottom; /* Rotating text so that it slants upwards */
+}
+
+.now-showing-text::before {
+  content: "Now Showing!";
+  position: relative;
+  top: 1.2rem;
+  left: 2rem;
+  overflow: hidden;
+  background: transparent;
+
+  /* text styles */
+  font-family: "Neon Sign Regular", monospace;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: pre-line; /* Preserve line breaks */
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: none;
+  font-stretch: expanded;
+  color: red;
+  letter-spacing: 0.125rem;
+  line-height: 1.2;
+}
+
+@keyframes now-showing-flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.now-showing-container::before {
+  animation: now-showing-flicker 15s ease-in-out infinite alternate;
+}
+
+/* Text styles for show titles in now-showing-container */
+.roboto-condensed-black {
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.075rem;
+  color: #0c090a; /* night */
+  text-transform: uppercase;
+  text-shadow: 0.02rem 0.02rem 0.02rem #292319; /* zeus */
+}
+
+/* Container for the now-showing show titles */
+.show-title-container {
+  width: 100%;
+  height: 100%;
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.marquee-lights,
+.marquee-text,
+.show-title-container {
+  animation: flicker 12s infinite alternate;
+}
+
+/* The individual show title itself */
+.show-title-item {
+  width: 100%;
+  height: auto;
+  margin: 0 0 0 2.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #0c090a; /* night */
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+/* Flickering Animation */
+@keyframes flicker {
+  0%,
+  100% {
+    filter: brightness(1.8);
+    opacity: 1;
+  }
+  2%,
+  2.01% {
+    filter: brightness(1.65);
+    opacity: 0.85;
+  }
+  2.85%,
+  3% {
+    filter: brightness(1.6);
+    opacity: 0.8;
+  }
+  3%,
+  3.05% {
+    filter: brightness(1.7);
+    opacity: 0.9;
+  }
+  3.6% {
+    filter: brightness(1.75);
+    opacity: 0.95;
+  }
+  22% {
+    filter: brightness(1.4);
+    opacity: 1;
+  }
+  23%,
+  23.05% {
+    filter: brightness(1.5);
+    opacity: 0.75;
+  }
+  23.1%,
+  23.3% {
+    filter: brightness(1.6);
+    opacity: 0.75;
+  }
+  25% {
+    filter: brightness(1.75);
+    opacity: 0.9;
+  }
+  45% {
+    filter: brightness(1.8);
+    opacity: 1;
+  }
+  62% {
+    filter: brightness(1.75);
+    opacity: 0.95;
+  }
+  63%,
+  63.09% {
+    filter: brightness(1.5);
+    opacity: 0.8;
+  }
+  63.7%,
+  64.5% {
+    filter: brightness(1.4);
+    opacity: 0.7;
+  }
+  64% {
+    filter: brightness(1.75);
+    opacity: 0.95;
+  }
+
+  87% {
+    filter: brightness(1.8);
+    opacity: 1;
+  }
+  88%,
+  88.03% {
+    filter: brightness(1.6);
+    opacity: 0.85;
+  }
+  88.8%,
+  89% {
+    filter: brightness(1.5);
+    opacity: 0.85;
+  }
+  90% {
+    filter: brightness(1.8);
+    opacity: 1;
+  }
+}
+
+/* Main site menu styles */
+.site-nav {
+  flex: 0 0 auto;
+}
+
+.site-nav ul {
+  height: 3rem;
+  justify-content: center;
+  align-items: start;
+  list-style-type: none;
+  padding: 0;
+}
+
+.site-nav li {
+  height: 2rem;
+  margin: 0.5rem 0.75rem;
+}
+
+/* Base style for all navigation links */
+.site-nav a {
+  font-size: 0.8rem;
+  color: #fff; /* Default color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Hover effect */
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #ea8295;
+  text-shadow: 0 0 0.06rem #2e2b00, 0 0 0.12rem #4a4100fa, 0 0 0.09rem #645b00ee,
+    0 0 0.24rem rgba(119, 116, 14, 0.871);
+}
+
+/* Active link style */
+.site-nav a.active {
+  color: gold;
+}
+
+/* Hero Styles */
+.hero {
+  grid-area: hero;
+  background-color: #000;
+  position: relative; /* Required for absolute positioning */
+}
+
+.hero-img {
+  width: var(--hero-width);
+  height: var(--hero-height);
+  background-color: #fff;
+  background-image: var(--hero-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -67%);
+  font-family: "Dusty Rose", "Vintage culture", serif;
+  font-size: 10vw; /* For responsive resizing of overlay text */
+  line-height: 15vw;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5); /* Adjust the shadow */
+}
+
+/* Main content area and event rows */
+.main,
+footer-container {
+  grid-area: main;
+  width: calc(0.8 * var(--hero-width)); /* Facilitating responsive layout */
+  height: auto;
+  padding: 1.25rem calc(0.1 * var(--hero-width));
+}
+
+.events-header-row {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+  border: 1px solid #e1e1e1;
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Flex container for event cards */
+.event-cards {
+  width: 100%;
+
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Individual event card */
+.event-card {
+  flex: 1 1 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Image box */
+.image-box {
+  width: 7rem;
+  height: auto;
+  overflow: hidden;
+  float: left; /* Float img left for wrapping text around */
+  display: grid;
+  place-items: center;
+  border: 0.125rem solid #ece9e9;
+  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 0.1rem;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Event blurb text */
+.event-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: "Anastasia", cursive;
+}
+
+.event-dates {
+  font-size: 0.8rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.event-summary {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  width: 100%;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  white-space: wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to three lines */
+  -webkit-box-orient: vertical; /* Vertical layout */
+}
+
+.event-summary p {
+  display: inline;
+  font-family: "Roboto Serif", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+/* Clearfix for proper clearing */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.read-more {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #007bff;
+  cursor: pointer;
+}
+
+hr.event-hr {
+  line-height: 1rem;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5rem;
+  opacity: 0.5;
+}
+hr.event-hr:before {
+  content: "";
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+hr.event-hr:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
+}
+
+.sidebar {
+  width: 5%;
+  min-height: 100%;
+}
+
+.header,
+.marquee-text-backing,
+.show-title-container,
+.hero,
+.site-nav ul,
+.main,
+.event-cards,
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: calc(1 * var(--hero-width)); /* Facilitating responsive layout */
+  height: auto;
+  padding: 1.25rem;
+  background: #000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer-container {
+  width: calc(0.9 * var(--hero-width)); /* Facilitating responsive layout */
+  height: auto;
+  background: #000;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.footer-item p,
+a,
+i,
+li,
+span {
+  font-size: 0.8rem; /* base font size for footer text */
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-item h3 {
+  font-size: 0.94rem;
+  font-variant: small-caps;
+  text-align: center;
+  margin: 0 0 0.75rem 0;
+  color: gold;
+  font-weight: 500;
+}
+
+#directions {
+  justify-content: center;
+  align-items: center;
+}
+
+#directions img {
+  width: 8rem;
+  min-width: 6rem;
+  max-width: 10rem;
+  height: auto;
+}
+
+#map {
+  font-size: 0.7rem;
+  justify-content: center;
+}
+
+#map iframe {
+  width: 12rem;
+  min-width: 10rem;
+  max-width: 15rem;
+  height: auto;
+}
+
+#info {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  color: #fff;
+  text-align: center;
+}
+
+#info a {
+  display: inline;
+  margin: 0.5rem;
+}
+
+#socials {
+  text-align: center;
+}
+
+#footer-socials-icon-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+}
+
+.footer-social-icon {
+  margin: 0.25rem;
+}
+
+#partner-promotions h4 {
+  font-size: 1rem;
+  font-family: "Neon Triper", cursive;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.12rem;
+  color: #f4beb6;
+  text-align: center;
+  padding: 0.25rem 0 0 0;
+  margin: 0;
+}
+
+.partner-offer {
+  max-width: 7rem;
+  height: 7rem;
+  margin: 0 0.25rem;
+}

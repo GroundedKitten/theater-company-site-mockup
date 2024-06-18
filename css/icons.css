@@ -1,0 +1,160 @@
+.fa-caret-down {
+  color: #000;
+}
+
+/* Common styles for icons */
+.social-icon,
+.fa-phone,
+.fa-envelope,
+.fa-map-pin,
+.fa-brands {
+  font-size: 1.25rem;
+  filter: brightness(1);
+}
+
+.fa-ticket,
+.fa-bell {
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.fa-phone:hover,
+.fa-envelope:hover,
+.fa-map-pin:hover,
+.fa-brands:hover,
+.fa-ticket:hover,
+.fa-bell:hover,
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-x-twitter:hover,
+.fa-youtube:hover,
+.fa-pinterest:hover,
+.fa-youtube:hover,
+.fa-linkedin:hover {
+  filter: brightness(1.3);
+  transition: color 0.5s ease; /* For smoother color transition */
+  box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.5),
+    /* Smaller, more intense glow */ 0 0 1.25rem rgba(255, 255, 255, 0.3),
+    /* Medium glow */ 0 0 1.875rem rgba(255, 255, 255, 0.1); /* Larger, subtle glow */
+}
+
+/* Styles for the social media icons */
+.social-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Unique styles for icons */
+.fa-caret-down {
+  color: var(--caret-down-color);
+}
+
+.fa-phone {
+  color: var(--phone-color);
+}
+
+.fa-phone:hover {
+  color: var(--phone-hover-color);
+}
+
+.fa-envelope {
+  color: var(--envelope-color);
+}
+
+.fa-envelope:hover {
+  color: var(--envelope-hover-color);
+}
+
+.fa-map-pin {
+  color: var(--map-pin-color);
+}
+
+.fa-map-pin:hover {
+  color: var(--map-pin-hover-color);
+}
+
+.fa-ticket {
+  color: var(--ticket-color);
+}
+
+.fa-ticket:hover {
+  color: var(--ticket-hover-color);
+}
+
+.fa-bell {
+  color: var(--bell-color);
+}
+
+.fa-bell:hover {
+  color: var(--bell-hover-color);
+}
+
+.fa-facebook {
+  color: var(--facebook-color);
+}
+
+.fa-facebook:hover {
+  color: var(--facebook-hover-color);
+}
+
+.fa-instagram {
+  color: var(--instagram-color);
+}
+
+.fa-instagram:hover {
+  color: var(--instagram-hover-color);
+}
+
+.fa-x-twitter {
+  color: var(--x-twitter-color);
+}
+
+.fa-x-twitter:hover {
+  color: var(--x-twitter-hover-color);
+}
+
+.fa-youtube {
+  color: var(--youtube-color);
+}
+
+.fa-youtube:hover {
+  color: var(--youtube-hover-color);
+}
+
+.fa-linkedin {
+  color: var(--linkedin-color);
+}
+
+.fa-linkedin:hover {
+  color: var(--linkedin-hover-color);
+}
+
+.fa-pinterest {
+  color: var(--pinterest-color);
+}
+
+.fa-pinterest:hover {
+  color: var(--pinterest-hover-color);
+}
+
+#socials i {
+  font-size: 1.2rem;
+}
+
+#info i {
+  font-size: 1rem;
+  margin: 0.5rem 0.3rem;
+}
+
+#upcoming i {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}

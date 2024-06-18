@@ -1,0 +1,58 @@
+/* FONT IMPORTS */
+
+/* Main site font: Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:400,700&display=swap");
+
+/* Font Awesome v6 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+@font-face {
+  font-family: "Standing Room Only";
+  src: url("../fonts/standing-room-only/standing.woff") format("woff"),
+    url("../fonts/standing-room-only/standing.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Dusty Rose";
+  src: url("../fonts/vintage-culture/dusty-rose.woff") format("woff"),
+    url("../fonts/vintage-culture/dusty-rose.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Anastasia";
+  src: url("../fonts/anastasia/anastasia.woff") format("woff"),
+    url("../fonts/anastasia/anastasia.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vintage Culture";
+  src: url("../fonts/vintage-culture/vintage-culture.woff") format("woff"),
+    url("../fonts/vintage-culture/vintage-culture.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aradela Display";
+  src: url("../fonts/aradela/aradela-display.woff") format("woff"),
+    url("../fonts/aradela/aradela-display.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neon Triper";
+  src: url("../fonts/neon-triper/neon-triper.svg") format("svg"),
+    url("../fonts/neon-triper/neon-triper.woff") format("woff"),
+    url("../fonts/neon-triper/neon-triper.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neon Planet Display";
+  src: url("../fonts/neon-planet/neon-planet-display.svg") format("svg"),
+    url("../fonts/neon-planet/neon-planet-display.woff") format("woff"),
+    url("../fonts/neon-planet/neon-planet-display.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neon Sign Regular";
+  src: url("../fonts/neon-sign/neon-sign-regular.svg") format("svg"),
+    url("../fonts/neon-sign/neon-sign-regular.woff") format("woff"),
+    url("../fonts/neon-sign/neon-sign-regular.woff2") format("woff2");
+}

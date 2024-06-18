@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aradela Display';
+    src: url('fonts/Aradela-Display.eot');
+    src: url('fonts/Aradela-Display.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Aradela-Display.woff2') format('woff2'),
+         url('fonts/Aradela-Display.woff') format('woff'),
+         url('fonts/Aradela-Display.ttf')  format('truetype'),
+         url('fonts/Aradela-Display.svg#Aradela Display') format('svg');
+}
