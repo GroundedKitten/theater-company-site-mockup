@@ -1,3 +1,5 @@
+// Credit to Bing Chat for creating this script.
+
 function domReady(fn) {
   if (
     document.readyState === "complete" ||

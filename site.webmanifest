@@ -1,7 +1,7 @@
 {
-  "name": "Griot Theater",
+  "name": "Griot Theater Website Mockup",
   "short_name": "Griot",
-  "description": "A premier destination for enjoying theatrical performances.",
+  "description": "Chicago's most loved destination for theatrical performances.",
   "icons": [
     {
       "src": "/img/favicon/apple-touch-icon.png",
@@ -19,9 +19,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/features.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "theme_color": "#000",
+  "background_color": "#fff",
   "orientation": "portrait"
 }
